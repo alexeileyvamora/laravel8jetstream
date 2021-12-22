@@ -1,18 +1,13 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('adminlte::page')
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+@section('title', 'Proyecto Laravel 8 y gráficos!')
 
-    <title>Proyecto Laravel 8 y gráficos!</title>
-  </head>
-  <body>
-    <h1 class = "text-center">Proyecto Laravel 8 y gráficos!</h1>
+@section('content_header')
+    <h1>Proyecto Laravel 8 y gráficos!</h1>
+@stop
 
+@section('content')
+    <p>Bienvenidos a este proyecto!!!.</p>
     <div class= "container mt-5">
         <div class= "row" >
             <div class= "col" >
@@ -20,14 +15,19 @@
             </div>
         </div>
     </div>
+@stop
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
     <script>
         Highcharts.chart('container', {
     chart: {
@@ -65,6 +65,4 @@
     }]
 });
     </script>
-
-  </body>
-</html>
+@stop
