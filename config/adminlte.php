@@ -255,7 +255,7 @@ return [
         ],
         ['header' => 'CONFIGURACIÓN'],
         [
-            'text' => 'Perfil',
+            'text' => 'Perfil de usuarios',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],   
