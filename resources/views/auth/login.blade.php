@@ -1,3 +1,14 @@
+@extends('adminlte::page')
+
+@section('title', 'PizzaController')
+
+@section('content_header')
+    <h1>Login!</h1>
+@stop
+
+@section('content')
+    <p>Bienvenidos!!!.</p>
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -48,3 +59,16 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+
+
+
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+
+@stop

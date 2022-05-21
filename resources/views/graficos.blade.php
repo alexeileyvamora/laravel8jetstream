@@ -3,7 +3,7 @@
 @section('title', 'Proyecto Laravel 8 y gráficos!')
 
 @section('content_header')
-    <h1>Proyecto Laravel 8 y gráficos!</h1>
+    <h1>Gráficos!</h1>
 @stop
 
 @section('content')

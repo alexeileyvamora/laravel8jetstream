@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrowserController;
+use App\Http\Controllers\ConsultorController;
+use App\Http\Controllers\GananciaController;
+use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\DashController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +18,17 @@ use App\Http\Controllers\BrowserController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::get('/', [DashController::class, 'index']);
 
-Route::get('/dash', function () {
-    return view('dash.dash');
-});
+Route::get('dash', [DashController::class, 'index']);
 
 Route::get('graficos', [BrowserController::class, 'index']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('consulta', [ConsultorController::class, 'index']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
-    return view('dash.dash');
-})->name('dash');
+Route::resource('/ganancia', GananciaController::class);
+
+
+Route::get('pizza', [PizzaController::class, 'index']);
+
+
