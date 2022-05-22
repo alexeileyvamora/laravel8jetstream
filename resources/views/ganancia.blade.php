@@ -157,7 +157,7 @@ if (isset($_GET['labelyeardesde']) || isset($_GET['labelmonthdesde']) || isset($
 
 
 <div class="table-responsive-sm">  
-<table class="table table align-middle table-dark">
+<table class="table table align-middle table-dark table-hover">
 
 @foreach($periodos  as $key => $value) 
 
@@ -206,10 +206,15 @@ if (isset($_GET['labelyeardesde']) || isset($_GET['labelmonthdesde']) || isset($
                 <tbody>
                     <tr class="table-active">
                     <th scope="row"> {{ $sub_val }} </th>
-                    <th scope="row"> $R {{ $ganancia[$key][$sub_key] }} </th>
-                    <th scope="row"> -$R {{ $fijo[$key][$sub_key] }} </th>
-                    <th scope="row"> -$R {{ $comi[$key][$sub_key] }} </th>
-                    <th scope="row"> $R {{ $benefi[$key][$sub_key] }} </th>
+                    <th scope="row"> R$ {{ $ganancia[$key][$sub_key] }} </th>
+                    <th scope="row"> -R$ {{ $fijo[$key][$sub_key] }} </th>
+                    <th scope="row"> -R$ {{ $comi[$key][$sub_key] }} </th>
+                    @if( ($benefi[$key][$sub_key]) > 0 ) 
+                    <th scope="row"> R$ {{ $benefi[$key][$sub_key] }} </th>
+                    @else
+                    <th scope="row"> 
+                    <span class="badge rounded-pill bg-danger">R$ {{ $benefi[$key][$sub_key] }}</span> </th>
+                    @endif
                     </tr>
                 </tbody>              
        @endif
