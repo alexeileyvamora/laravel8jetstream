@@ -107,29 +107,6 @@ if (isset($_GET['labelyeardesde']) || isset($_GET['labelmonthdesde']) || isset($
 
 @section('content')
 
-@php
-
-    $heads = [
-        'Nro Mes',
-        'Mes',
-        'Nombre',
-        'Valor',
-        '% total',
-        'Ganancia Neta',
-        '% comision',
-        'ComisionOK',
-        'Costo fijo',
-        'Beneficio',
-    ];
-                
-    $config = [
-        'order' => [[0, 'desc']],
-        'columns' => [null, null, null, ['orderable' => false]],
-    ];
-
-    
-@endphp
-
 @section('plugins.TempusDominusBs4', true)
 
 @if(!empty($periodos))
