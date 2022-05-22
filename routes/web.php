@@ -22,12 +22,9 @@ Route::get('/', [DashController::class, 'index']);
 
 Route::get('dash', [DashController::class, 'index']);
 
-Route::get('graficos', [BrowserController::class, 'index']);
-
 Route::get('consulta', [ConsultorController::class, 'index']);
 
 Route::resource('/ganancia', GananciaController::class);
-
 
 Route::get('pizza', [PizzaController::class, 'index']);
 
